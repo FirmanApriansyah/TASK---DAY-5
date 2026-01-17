@@ -181,7 +181,7 @@ export class BlockchainService {
       // Most public RPCs limit the range of blocks for getLogs (e.g. 2048 or 50000).
       // If the range is too large (e.g. from 0 to latest), we automatically adjust it
       // to fetch only the recent history.
-      const MAX_BLOCK_RANGE = 40000n; // Safe limit below 50000
+      const MAX_BLOCK_RANGE = 2000n; // RPC limit is 2048, setting safe margin
       let safeFromBlock = fromBlockInput;
 
       if (toBlockNum - fromBlockInput > MAX_BLOCK_RANGE) {
