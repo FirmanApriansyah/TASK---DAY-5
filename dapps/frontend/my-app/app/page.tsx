@@ -201,7 +201,7 @@ export default function Page() {
       
       // Cek apakah backend tidak berjalan
       if (errorMessage.includes("Failed to fetch") || errorMessage.includes("ECONNREFUSED")) {
-        toast.error("Backend tidak berjalan. Pastikan backend server aktif di http://localhost:3001");
+        toast.error("Backend connection failed. Please try again later.");
       } else {
         toast.error(`Error: ${errorMessage}`);
       }
@@ -819,7 +819,7 @@ export default function Page() {
                     Tidak dapat mengambil data dari backend. Pastikan:
                   </p>
                   <ul className="text-red-300 text-xs list-disc list-inside space-y-1">
-                    <li>Backend server berjalan di http://localhost:3001</li>
+                    <li>Backend server is running and reachable</li>
                     <li>Backend dapat terhubung ke blockchain RPC</li>
                     <li>Kontrak smart contract sudah ter-deploy</li>
                   </ul>

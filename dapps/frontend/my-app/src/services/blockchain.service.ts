@@ -1,6 +1,5 @@
 // src/services/blockchain.service.ts
-const BACKEND_URL =
-  process.env.NEXT_PUBLIC_BACKEND_URL || "http://localhost:3001";
+const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL || "http://localhost:3001";
 
 interface ApiResponse<T> {
   statusCode: number;
