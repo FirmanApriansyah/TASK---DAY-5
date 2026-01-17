@@ -1,0 +1,11 @@
+{
+  "name": "root",
+  "private": true,
+  "scripts": {
+    "build": "echo 'Building root workspace'"
+  },
+  "workspaces": [
+    "dapps/backend",
+    "dapps/frontend/my-app"
+  ]
+}
