@@ -20,7 +20,7 @@ export class BlockchainService {
     // Priority: 1) Environment variable, 2) Ankr (most reliable), 3) Official
     const rpcUrl =
       process.env.BLOCKCHAIN_RPC_URL || 
-      'https://rpc.ankr.com/avalanche_fuji'; // Ankr RPC - most reliable
+      'https://api.avax-test.network/ext/bc/C/rpc'; // Official Public RPC
 
     console.log('===========================================');
     console.log('Initializing Blockchain Service');
